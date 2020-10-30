@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Todo({ todoText = "Do stuff" }) {
+export default function Todo({ todoText }) {
   return (
     <li>
       <input type="checkbox"></input>
