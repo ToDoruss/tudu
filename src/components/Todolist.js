@@ -1,10 +1,12 @@
 import React from "react";
 import Todo from "./Todo";
 
-export default function Todolist({ tuduObject }) {
+export default function Todolist({ tuduItems }) {
   return (
     <ul className="Todo__List">
-      <Todo tuduObject={tuduObject}></Todo>
+      {tuduItems.map((todo) => (
+        <Todo key={todo.id} tuduObject={todo} />
+      ))}
     </ul>
   );
 }

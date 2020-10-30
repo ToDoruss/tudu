@@ -1,0 +1,14 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.todo__text {
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.todo__checkbox {
+}
+.todo__date {
+}
