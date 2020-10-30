@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form({ setTuduObject }) {
+export default function Form({ tuduItems, setTuduItems }) {
   const [inputValue, setInputValue] = useState("");
 
   const getDate = () => {
@@ -15,10 +15,16 @@ export default function Form({ setTuduObject }) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        setTuduObject({
-          text: inputValue,
-          date: getDate(),
-        });
+
+        setTuduItems([
+          ...tuduItems,
+          {
+            id: Math.floor(Math.random() * 10000),
+            text: inputValue,
+            date: getDate(),
+            done: false,
+          },
+        ]);
       }}
     >
       <input
