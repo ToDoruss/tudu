@@ -5,12 +5,14 @@ import Todolist from "./components/Todolist";
 import "./global.css";
 
 function App() {
-  const [inputText, setInputText] = useState("");
+  // const [inputText, setInputText] = useState("");
+  const [tuduObject, setTuduObject] = useState(null);
+  console.log(tuduObject);
   return (
     <div className="container">
       <Header />
-      <Form setInputText={setInputText} testProperty={"Testtext"} />
-      <Todolist inputText={inputText} />
+      <Form setTuduObject={setTuduObject} />
+      {tuduObject && <Todolist tuduObject={tuduObject} />}
     </div>
   );
 }

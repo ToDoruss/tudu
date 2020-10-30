@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function Todo({ todoText }) {
+export default function Todo({ tuduObject }) {
   return (
     <li>
       <input type="checkbox"></input>
-      {todoText}
+      {console.log("todotest", tuduObject)}
+      {tuduObject?.text}
+      {tuduObject?.date}
     </li>
   );
 }
