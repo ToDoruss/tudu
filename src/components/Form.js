@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-
-export default function Form() {
-  const [inputText, setInputText] = useState("Tu etwas!");
+export default function Form({ setInputText }) {
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
         const input = document.querySelector(".todo__input"); // ToDo: Verschlanken?
-        console.log(input.value);
+        setInputText(input.value);
       }}
     >
       <input
