@@ -15,15 +15,18 @@ function App() {
   const [theLuckyOne, setTheLuckyOne] = useState(
     JSON.parse(localStorage.getItem("theLuckyOne")) || ""
   );
+  const [round, setRound] = useState(
+    JSON.parse(localStorage.getItem("round")) || 0
+  );
 
   useEffect(() => {
     try {
       console.log("set in buttonclick");
-      setLocalStorage(values, alreadyChoosen, theLuckyOne);
+      setLocalStorage(values, alreadyChoosen, theLuckyOne, round);
     } catch (error) {
       console.log(error);
     }
-  }, [values, alreadyChoosen, theLuckyOne]);
+  }, [values, alreadyChoosen, theLuckyOne, round]);
 
   const moveFromValuesToAlreadyChoosen = (value) => {
     const valuesCleaned = values.filter((item) => item !== value);
@@ -44,7 +47,7 @@ function App() {
         <hr />
 
         <div className="realDecideContainer">
-          {/* <h2>wheelTitel</h2> */}
+          <h2>Round {round}</h2>
           <button
             className="button__reRun glow-on-hover"
             onClick={() => {
@@ -53,6 +56,7 @@ function App() {
                 setTheLuckyOne(randomPerson);
                 moveFromValuesToAlreadyChoosen(randomPerson);
               } else {
+                setRound(round + 1);
                 setValues(alreadyChoosen);
                 setTheLuckyOne(null);
                 setAlreadyChoosen([]);
