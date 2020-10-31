@@ -11,7 +11,7 @@ function App() {
     <div className="container">
       <Header />
       <main className="main">
-        <Form tuduItems={values} setValues={setValues} />
+        <Form setValues={setValues} />
         <div className="realDecide">
           <h2>wheelTitel</h2>
           {values.length > 0 && <RealDecide values={values} />}

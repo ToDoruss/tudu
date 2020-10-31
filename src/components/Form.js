@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Form({ setValues }) {
   const [inputValue, setInputValue] = useState("");
-  const delimiter = " ";
+  const [delimiter, setDelimiter] = useState(" ");
   // const getDate = () => {
   //   const time = new Date();
   //   const day = time.getDate();
@@ -22,6 +22,7 @@ export default function Form({ setValues }) {
       onSubmit={(event) => {
         event.preventDefault();
         console.log("submitted");
+        console.log("delimiter", delimiter);
         setValues(inputValueToArray(inputValue, delimiter));
       }}
     >
@@ -31,11 +32,16 @@ export default function Form({ setValues }) {
         type="text"
         placeholder="Add Persons comma,separated!"
         className="persons__input"
-      ></input>
+      />
       <input type="submit" value="Submit" />
       <div className="form__extras">
         <label htmlFor="persons__inputDelimiter">Delimiter</label>
-        <input id="persons__inputDelimiter" type="text" />
+        <input
+          placeholder={delimiter}
+          onChange={(event) => setDelimiter(event.target.value)}
+          id="persons__inputDelimiter"
+          type="text"
+        />
       </div>
     </form>
   );

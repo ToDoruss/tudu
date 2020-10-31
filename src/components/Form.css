@@ -17,5 +17,6 @@
   color: var(--text-color);
 }
 #persons__inputDelimiter {
+  color: black;
   width: 10%;
 }
