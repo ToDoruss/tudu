@@ -1,9 +1,6 @@
 .setList {
   margin: 2rem auto;
   width: 80%;
-  border-right: 1px dotted var(--action-text);
-  border-left: 1px dotted var(--action-text);
-  border-bottom: 1px dotted var(--action-text);
 }
 
 .setList summary {
