@@ -11,6 +11,7 @@
 .persons__input {
   min-height: 100px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .form__extras {

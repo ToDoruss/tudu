@@ -17,13 +17,6 @@
   border-radius: 10px;
 }
 
-.value {
-  background-color: cornsilk;
-  margin: 1rem auto;
-  padding: 0.5rem 0;
-  list-style-type: none;
-}
-
 /* https://webdeasy.de/top-css-buttons/ */
 .glow-on-hover {
   border: none;
