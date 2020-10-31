@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Form({ setValues, setAlreadyChoosen }) {
   const [inputValue, setInputValue] = useState("");
-  const [delimiter, setDelimiter] = useState(" ");
+  const [separator, setSeparator] = useState(" ");
 
   function inputValueToArray(inputText, delimiter) {
     return inputText.split(`${delimiter}`);
@@ -15,25 +15,25 @@ export default function Form({ setValues, setAlreadyChoosen }) {
       onSubmit={(event) => {
         event.preventDefault();
         console.log("submitted");
-        console.log("delimiter", delimiter);
+        console.log("delimiter", separator);
         setAlreadyChoosen([]);
-        setValues(inputValueToArray(inputValue, delimiter));
+        setValues(inputValueToArray(inputValue, separator));
       }}
     >
       <input
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
         type="text"
-        placeholder="Add Persons comma,separated!"
+        placeholder="Add Persons [SPACE] separated! or use the separator-Input"
         className="persons__input"
       />
       <input type="submit" value="Submit" />
       <div className="form__extras">
-        <label htmlFor="persons__inputDelimiter">Delimiter</label>
+        <label htmlFor="persons__inputSeperator">seperator: </label>
         <input
-          placeholder={delimiter}
-          onChange={(event) => setDelimiter(event.target.value)}
-          id="persons__inputDelimiter"
+          placeholder={separator}
+          onChange={(event) => setSeparator(event.target.value)}
+          id="persons__inputSeperator"
           type="text"
         />
       </div>
