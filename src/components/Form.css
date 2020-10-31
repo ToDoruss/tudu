@@ -1,0 +1,21 @@
+.form {
+  background-color: rebeccapurple;
+  text-align: center;
+}
+
+.persons__input {
+  min-height: 200px;
+  width: 80%;
+  text-align: center;
+}
+
+.form__extras {
+  padding: 1rem;
+}
+
+.form * > label {
+  color: var(--text-color);
+}
+#persons__inputDelimiter {
+  width: 10%;
+}

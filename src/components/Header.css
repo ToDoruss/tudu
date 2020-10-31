@@ -1,0 +1,12 @@
+.header {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  text-align: center;
+  width: 100%;
+}
+
+.header__titel,
+.header__subtitel {
+  margin: 0;
+  padding: 1rem;
+}

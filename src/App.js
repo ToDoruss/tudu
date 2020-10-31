@@ -10,9 +10,11 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Form tuduItems={tuduItems} setTuduItems={setTuduItems} />
-
-      {tuduItems.length > 0 && <Todolist tuduItems={tuduItems} />}
+      <main className="main">
+        <Form tuduItems={tuduItems} setTuduItems={setTuduItems} />
+        <h2>wheelTitel</h2>
+        {tuduItems.length > 0 && <Todolist tuduItems={tuduItems} />}
+      </main>
     </div>
   );
 }
