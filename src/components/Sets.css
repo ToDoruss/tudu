@@ -1,0 +1,32 @@
+.setList {
+  margin: 2rem auto;
+  width: 80%;
+  border-right: 1px dotted var(--action-text);
+  border-left: 1px dotted var(--action-text);
+  border-bottom: 1px dotted var(--action-text);
+}
+
+.setList summary {
+  margin: auto;
+  color: var(--action-text);
+  letter-spacing: 2px;
+  text-shadow: 4px 0 1px black;
+  font-family: var(--titelFont);
+  font-size: 1.5rem;
+}
+
+.setList form {
+  margin: 1rem;
+}
+
+.setList input {
+  padding: 0.3rem 1rem;
+}
+
+.setList__set {
+  margin: 0.5rem;
+  font-size: 1rem;
+  background-color: purple;
+  color: white;
+  border: var(--action-text);
+}

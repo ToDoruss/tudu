@@ -53,7 +53,7 @@ hr {
   height: 100%;
   max-width: 600px;
   display: grid;
-  grid-template-rows: 275px 1fr;
+  grid-template-rows: minmax(110px, auto) 1fr;
   align-content: center;
   text-align: center;
 }
