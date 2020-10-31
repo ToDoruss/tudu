@@ -3,8 +3,8 @@ import "./RealDecide.css";
 import React from "react";
 import Value from "./Value";
 
-export default function Todolist({ values }) {
-  console.log({ values });
+export default function Realdecide({ values }) {
+  // console.log({ values });
   return (
     <ul className="RealDecide">
       {values.map((value) => (

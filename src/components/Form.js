@@ -1,16 +1,9 @@
 import "./Form.css";
 import { useState } from "react";
 
-export default function Form({ setValues }) {
+export default function Form({ setValues, setAlreadyChoosen }) {
   const [inputValue, setInputValue] = useState("");
   const [delimiter, setDelimiter] = useState(" ");
-  // const getDate = () => {
-  //   const time = new Date();
-  //   const day = time.getDate();
-  //   const month = time.getMonth() + 1;
-  //   const year = time.getFullYear();
-  //   return `${day}|${month}|${year}`;
-  // };
 
   function inputValueToArray(inputText, delimiter) {
     return inputText.split(`${delimiter}`);
@@ -23,6 +16,7 @@ export default function Form({ setValues }) {
         event.preventDefault();
         console.log("submitted");
         console.log("delimiter", delimiter);
+        setAlreadyChoosen([]);
         setValues(inputValueToArray(inputValue, delimiter));
       }}
     >
