@@ -47,7 +47,13 @@ function App() {
         <hr />
 
         <div className="realDecideContainer">
-          <h2>Round {round}</h2>
+          <h2
+            onDoubleClick={() => {
+              setRound(0);
+            }}
+          >
+            Round {round}
+          </h2>
           <button
             className="button__reRun glow-on-hover"
             onClick={() => {
