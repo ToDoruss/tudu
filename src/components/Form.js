@@ -3,10 +3,9 @@ import { useState } from "react";
 
 export default function Form({ setValues, setAlreadyChoosen, setTheLuckyOne }) {
   const [inputValue, setInputValue] = useState("");
-  const [separator, setSeparator] = useState(" ");
-
-  function inputValueToArray(inputText, delimiter) {
-    return inputText.split(`${delimiter}`);
+  const [separator, setSeparator] = useState(/\d+\s/g);
+  function inputValueToArray(inputText, seperator) {
+    return inputText.split(seperator);
   }
 
   return (
@@ -38,7 +37,10 @@ export default function Form({ setValues, setAlreadyChoosen, setTheLuckyOne }) {
         <label htmlFor="persons__inputSeperator">seperator: </label>
         <input
           placeholder={separator}
-          onChange={(event) => setSeparator(event.target.value)}
+          onChange={(event) => {
+            console.log("Seperator set ", event.target.value);
+            setSeparator(event.target.value);
+          }}
           id="persons__inputSeperator"
           type="text"
         />
