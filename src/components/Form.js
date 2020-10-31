@@ -23,16 +23,9 @@ export default function Form({ setValues, setAlreadyChoosen, setTheLuckyOne }) {
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
         type="text"
-        placeholder="Add Persons [SPACE] separated! or use the separator-Input"
+        placeholder="👩‍🎤 Use the separator-Input  ⬇️ ‍"
         className="persons__input"
       />
-      <button
-        className="button__submit glow-on-hover"
-        type="submit"
-        value="Submit"
-      >
-        Submit
-      </button>
       <div className="form__extras">
         <label htmlFor="persons__inputSeperator">seperator: </label>
         <input
@@ -45,6 +38,13 @@ export default function Form({ setValues, setAlreadyChoosen, setTheLuckyOne }) {
           type="text"
         />
       </div>
+      <button
+        className="button__submit glow-on-hover"
+        type="submit"
+        value="Submit"
+      >
+        Submit
+      </button>
     </form>
   );
 }
