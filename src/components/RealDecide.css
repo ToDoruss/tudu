@@ -17,6 +17,11 @@
   border-radius: 10px;
 }
 
+.theLuckyOne {
+  display: inline-block;
+  border: 1px solid var(--action-text);
+  padding: 0.5rem;
+}
 /* https://webdeasy.de/top-css-buttons/ */
 .glow-on-hover {
   border: none;
