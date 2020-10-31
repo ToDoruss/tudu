@@ -71,7 +71,7 @@ function App() {
             {values.length > 0 && (
               <>
                 <h2>👬👭 Participants 👬👭</h2>
-                <RealDecide values={values} />
+                <RealDecide values={values} setValues={setValues} />
               </>
             )}
           </div>
@@ -80,7 +80,10 @@ function App() {
             {alreadyChoosen.length > 0 && (
               <>
                 <h2>🎯 Already Choosen 🎯</h2>
-                <RealDecide values={alreadyChoosen} />
+                <RealDecide
+                  values={alreadyChoosen}
+                  setValues={setAlreadyChoosen}
+                />
               </>
             )}
           </div>
