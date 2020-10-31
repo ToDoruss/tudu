@@ -41,8 +41,9 @@ function App() {
           setAlreadyChoosen={setAlreadyChoosen}
           setTheLuckyOne={setTheLuckyOne}
         />
+        <hr />
 
-        <div className="realDecide">
+        <div className="realDecideContainer">
           {/* <h2>wheelTitel</h2> */}
           <button
             className="button__reRun glow-on-hover"
@@ -62,14 +63,14 @@ function App() {
           </button>
           {theLuckyOne && (
             <>
-              <h2>Its you!</h2>
-              <h3>{theLuckyOne}</h3>
+              <h3>🚀 Its you! 👩‍🎤</h3>
+              <h2>✨ {theLuckyOne} ✨</h2>
             </>
           )}
           <div className="valuesToChoose">
             {values.length > 0 && (
               <>
-                <h2>Participants</h2>
+                <h2>👬👭 Participants 👬👭</h2>
                 <RealDecide values={values} />
               </>
             )}
@@ -78,7 +79,7 @@ function App() {
           <div className="alreadyChoosen">
             {alreadyChoosen.length > 0 && (
               <>
-                <h2>Already Choosen</h2>
+                <h2>🎯 Already Choosen 🎯</h2>
                 <RealDecide values={alreadyChoosen} />
               </>
             )}

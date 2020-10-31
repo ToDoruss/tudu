@@ -27,11 +27,13 @@ export default function Form({ setValues, setAlreadyChoosen, setTheLuckyOne }) {
         placeholder="Add Persons [SPACE] separated! or use the separator-Input"
         className="persons__input"
       />
-      <input
+      <button
         className="button__submit glow-on-hover"
         type="submit"
         value="Submit"
-      />
+      >
+        Submit
+      </button>
       <div className="form__extras">
         <label htmlFor="persons__inputSeperator">seperator: </label>
         <input

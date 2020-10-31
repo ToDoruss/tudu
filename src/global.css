@@ -32,6 +32,12 @@ h3 {
   letter-spacing: 2px;
   font-weight: 100;
 }
+
+hr {
+  margin-top: 2rem;
+  border-bottom: 0.5px solid #bbb;
+  width: 80%;
+}
 #root {
   width: 100vw;
   height: 100vh;
