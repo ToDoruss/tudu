@@ -6,6 +6,8 @@
   --text-color: white;
   --titelFont: "Alfa Slab One", cursive;
   --textFont: "Montserrat", sans-serif;
+  --action-background: #978cd2;
+  --action-text: yellow;
 }
 
 *,
@@ -26,10 +28,14 @@ h1,
 h2,
 h3 {
   font-family: var(--titelFont);
+  color: var(--text-color);
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 #root {
   width: 100vw;
   height: 100vh;
+  background-color: rebeccapurple;
 }
 .container {
   display: flex;
@@ -39,6 +45,7 @@ h3 {
 .main {
   width: 100%;
   height: 100%;
+  max-width: 500px;
   display: grid;
   grid-template-rows: 275px 1fr;
   align-content: center;

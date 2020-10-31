@@ -36,12 +36,16 @@ function App() {
     <div className="container">
       <Header />
       <main className="main">
-        <Form setValues={setValues} setAlreadyChoosen={setAlreadyChoosen} />
+        <Form
+          setValues={setValues}
+          setAlreadyChoosen={setAlreadyChoosen}
+          setTheLuckyOne={setTheLuckyOne}
+        />
 
         <div className="realDecide">
-          <h2>wheelTitel</h2>
+          {/* <h2>wheelTitel</h2> */}
           <button
-            className="button__reRun"
+            className="button__reRun glow-on-hover"
             onClick={() => {
               if (values.length > 0) {
                 const randomPerson = choosOneRandom(values);

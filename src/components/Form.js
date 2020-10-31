@@ -1,7 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
 
-export default function Form({ setValues, setAlreadyChoosen }) {
+export default function Form({ setValues, setAlreadyChoosen, setTheLuckyOne }) {
   const [inputValue, setInputValue] = useState("");
   const [separator, setSeparator] = useState(" ");
 
@@ -15,8 +15,8 @@ export default function Form({ setValues, setAlreadyChoosen }) {
       onSubmit={(event) => {
         event.preventDefault();
         console.log("submitted");
-        console.log("delimiter", separator);
         setAlreadyChoosen([]);
+        setTheLuckyOne("");
         setValues(inputValueToArray(inputValue, separator));
       }}
     >
@@ -27,7 +27,11 @@ export default function Form({ setValues, setAlreadyChoosen }) {
         placeholder="Add Persons [SPACE] separated! or use the separator-Input"
         className="persons__input"
       />
-      <input type="submit" value="Submit" />
+      <input
+        className="button__submit glow-on-hover"
+        type="submit"
+        value="Submit"
+      />
       <div className="form__extras">
         <label htmlFor="persons__inputSeperator">seperator: </label>
         <input
