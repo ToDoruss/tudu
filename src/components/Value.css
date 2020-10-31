@@ -1,14 +1,10 @@
-.todo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.todo__text {
-  max-width: 80%;
-  word-wrap: break-word;
-}
-.todo__checkbox {
-}
-.todo__date {
+.value {
+  display: table;
+  border-radius: 10px;
+  background-color: var(--action-background);
+  font-family: var(--titelFont);
+  color: var(--text-color);
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  list-style-type: none;
 }

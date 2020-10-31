@@ -17,13 +17,11 @@
   border-radius: 10px;
 }
 
-.value {
-  background-color: cornsilk;
-  margin: 1rem auto;
-  padding: 0.5rem 0;
-  list-style-type: none;
+.theLuckyOne {
+  display: inline-block;
+  border: 1px solid var(--action-text);
+  padding: 0.5rem;
 }
-
 /* https://webdeasy.de/top-css-buttons/ */
 .glow-on-hover {
   border: none;

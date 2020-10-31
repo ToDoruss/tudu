@@ -64,7 +64,7 @@ function App() {
           {theLuckyOne && (
             <>
               <h3>🚀 Its you! 👩‍🎤</h3>
-              <h2>✨ {theLuckyOne} ✨</h2>
+              <h2 className="theLuckyOne">✨ {theLuckyOne} ✨</h2>
             </>
           )}
           <div className="valuesToChoose">
