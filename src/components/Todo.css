@@ -3,12 +3,28 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-top: 0.5px solid #171b36;
+  padding: 0.25rem;
 }
 .todo__text {
   max-width: 80%;
   word-wrap: break-word;
 }
 .todo__checkbox {
+  width: 20px;
+  height: 20px;
+  /* border-radius: 25px;
+  padding: 0;
+  background-color: #171b36;
+  color: white;
+  cursor: pointer; */
 }
+
 .todo__date {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.todo__delete {
+  background: none;
+  border: none;
 }
