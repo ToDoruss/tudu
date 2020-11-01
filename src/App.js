@@ -12,7 +12,9 @@ function App() {
       <Header />
       <Form tuduItems={tuduItems} setTuduItems={setTuduItems} />
 
-      {tuduItems.length > 0 && <Todolist tuduItems={tuduItems} />}
+      {tuduItems.length > 0 && (
+        <Todolist tuduItems={tuduItems} setTuduItems={setTuduItems} />
+      )}
     </div>
   );
 }
