@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Form.css";
 
 export default function Form({ tuduItems, setTuduItems }) {
   const [inputValue, setInputValue] = useState("");
@@ -13,6 +14,7 @@ export default function Form({ tuduItems, setTuduItems }) {
 
   return (
     <form
+      className="todo__form"
       onSubmit={(event) => {
         event.preventDefault();
 
@@ -31,7 +33,7 @@ export default function Form({ tuduItems, setTuduItems }) {
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
         type="text"
-        placeholder="Was willst du dun?"
+        placeholder="Was willst du tun?"
         className="todo__input"
       ></input>
     </form>
